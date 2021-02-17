@@ -1,0 +1,53 @@
+#root{
+    font-family: 'Dosis', serif;
+    font-size: 48px;
+    background-color:lightgray;
+  }
+#heading{
+    font-weight: bolder;   
+}
+
+
+#meme-img{
+  min-height: 120px;
+  max-height: 250px;
+}
+
+#edit-meme{
+  min-height: 200px;
+  max-height: 400px;
+  max-width: 200px;
+  min-width: 400px;
+  align-self: center;
+}
+
+div.card {
+  /* width: 340px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+#delete{
+    background-color: lightcoral;
+    margin-right: 5px;
+    border:none;
+}
+
+#link{
+  color: white;
+}
+#edit{
+    background-color: lightseagreen;
+    margin-right: 5px;
+    border: none;
+}
+#submit-btn{
+    color: white;
+    background-color: cornflowerblue;
+    
+}
+#swagger{
+  color: white;
+  background-color: rgb(40, 156, 40);
+  border: none;
+}

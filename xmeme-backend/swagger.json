@@ -1,0 +1,217 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Xmeme API",
+    "description": "fetching/posting memes.",
+    "version": "1.0.0"
+  },
+  "host": "xmeme.harsh-vardhan.codes",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/memes": {
+      "get": {
+        "tags": [
+          "/memes"
+        ],
+        "summary": "Returns a list of memes (owner, caption, url).",
+        "description": "fetches latest 100 memes from database",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Meme"
+            }
+          },
+          "500": {
+            "description": "SERVER ERROR"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "/memes"
+        ],
+        "summary": "Creates a new meme.",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "meme",
+            "schema": {
+              "$ref": "#/definitions/PostMeme"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/MemeID"
+            }
+          },
+          "406": {
+            "description": "Not Acceptable"
+          },
+          "409": {
+            "description": "DUPLICATE (server conflict)"
+          }
+        }
+      }
+    },
+    "/memes/{memeId}": {
+      "get": {
+        "summary": "Returns a meme by ID.",
+        "tags": [
+          "/memes"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memeId",
+            "description": "id assigned to meme",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Meme"
+            }
+          },
+          "404": {
+            "description": "NOT FOUND"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "/memes"
+        ],
+        "summary": "Creates a new Meme.",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memeId",
+            "description": "id assigned to meme",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "memeId",
+            "schema": {
+              "$ref": "#/definitions/UpdateMeme"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "NOT FOUND"
+          },
+          "405": {
+            "description": "Method Not Allowed (name change)"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "/memes"
+        ],
+        "summary": "Deletes a meme",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "memeId",
+            "description": "id assigned to meme",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "NOT FOUND"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Meme": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "caption",
+        "url"
+      ]
+    },
+    "UpdateMeme": {
+      "properties": {
+        "caption": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "caption",
+        "url"
+      ]
+    },
+    "PostMeme": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "caption",
+        "url"
+      ]
+    },
+    "MemeID": {
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+}
