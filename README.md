@@ -1,7 +1,7 @@
 # Xmeme
 
 
-Xmeme is a simple MERN stack REST api web-app. which lets users to post, edit, delete and scroll through alot of fun memes.
+Xmeme is a simple MERN stack REST api based web-app. which lets users to post, edit, delete and scroll through alot of fun memes.
 
 
 
