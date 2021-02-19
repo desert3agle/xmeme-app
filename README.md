@@ -50,7 +50,7 @@ $ npm run build
 $ npm install netlify-cli -g
 $ netlif login
 
-$netlify deploy --dir=public --prod
+$netlify deploy --dir=build --prod
 ```
 
 ## Backend 
