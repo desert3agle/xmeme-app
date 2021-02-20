@@ -107,6 +107,19 @@ Provide correct values in .env and proceed with local run :
 $ npm start
 ```
 
+
+Alternatively, you can install requirements and run through script
+
+```sh
+$ cd xmeme-backend
+$ chmod +x install.sh
+$ chmod +x server_run.sh
+$ ./install.sh
+$ ./server_run.sh
+
+```
+
+
 ### Deployment
 
 Backend is deployed on  AWS ubuntu 18.04 EC2 instance with 
