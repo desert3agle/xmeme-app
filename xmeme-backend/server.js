@@ -12,9 +12,11 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocs = require('./swagger.json');
 
 //Defaults as per project requirements
-const swaggerPort = 8080;
-const PORT = 8081;
-const MONGO_LOCAL = "mongodb://localhost/xmemedatabase";
+
+const swaggerPort = process.env.SWAGGER_PORT || 8080;
+const PORT = process.env.PORT || 8081;
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost/xmemedatabase";
+
 
 //middleweres******************/
 
@@ -43,7 +45,7 @@ app.get('/', (req, res) => {
 //-------------------------------
 
 //DB Connection
-mongoose.connect(MONGO_LOCAL, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log('DB is connected');
 });
 
