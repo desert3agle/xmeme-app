@@ -7,7 +7,7 @@ const Navbar = props => (
             <img src={props.image} width="30" height="30" className="d-inline-block align-top" alt="" />
             Xmeme
     </a>
-        <a className="navbar-brand ml-auto btn btn-primary" id="swagger" href="https://xmeme.harsh-vardhan.codes/swagger-ui" target='_blank' >Swagger UI</a>
+        <a className="navbar-brand ml-auto btn btn-primary" id="swagger" href={process.env.REACT_APP_SWAGGER} target='_blank' >Swagger UI</a>
     </nav>
 )
 

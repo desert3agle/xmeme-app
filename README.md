@@ -89,24 +89,6 @@ Xmeme backend uses :
 
 ### Local Run
 
-This project was setup in Node 12.xx so to install it:
-
-```sh
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-To Install and start Mongodb 4.4 :
-```sh
-wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-sudo apt-get update
-sudo apt-get install -y mongodb-org
-sudo systemctl start mongod
-```
-you can use mongodb atlas as an alternative.
-
-
 Install dependencies :
 
 ```sh
@@ -132,7 +114,7 @@ Backend is deployed on  AWS ubuntu 18.04 EC2 instance with
 
  * [PM2] -  	process manger
  * [nginx] - 	web server and reverse proxy
- * [ufw] - 	firewall
+ * [UFW] - 	firewall
  * [Let's Encrypt and Certbot] -  for HTTPS deployment
  * [name.com] - for domain name provider
 

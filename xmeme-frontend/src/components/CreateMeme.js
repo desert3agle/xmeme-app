@@ -21,7 +21,7 @@ class CreateMeme extends Component {
     }
     //GET (/memes endpoint) req in this lifecycle methods, helps getting data when component mounts
     componentDidMount() {
-        axios.get('https://xmeme.harsh-vardhan.codes/memes')
+        axios.get(process.env.REACT_APP_API_URL)
             .then(response => {
                 this.setState({
                     memeArray: response.data
@@ -36,7 +36,7 @@ class CreateMeme extends Component {
     //funtion to delete meme, recieves id. makes DELETE (/memes/:id endpoint) req to the server
     deleteMeme(memeId) {
         console.log(memeId);
-        axios.delete('https://xmeme.harsh-vardhan.codes/memes/' + memeId)
+        axios.delete(process.env.REACT_APP_API_URL + '/' + memeId)
             .then(() => {
                 this.setState({
                     memeArray: this.state.memeArray.filter(index => index.id !== memeId)
@@ -65,7 +65,7 @@ class CreateMeme extends Component {
             caption: this.state.caption,
             url: this.state.url
         }
-        axios.post('https://xmeme.harsh-vardhan.codes/memes', meme)
+        axios.post(process.env.REACT_APP_API_URL, meme)
             .then(memeId => {
                 const newMeme = {
                     id: memeId.data.id,

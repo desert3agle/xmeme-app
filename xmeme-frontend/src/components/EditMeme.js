@@ -19,7 +19,7 @@ class EditMeme extends Component {
     }
     // mounts current details of the meme, GET (/memes/:id) end point
     componentDidMount() {
-        axios.get('https://xmeme.harsh-vardhan.codes/memes/' + this.props.match.params.id)
+        axios.get(process.env.REACT_APP_API_URL + '/' + this.props.match.params.id)
             .then(response => {
                 console.log(response.data);
                 this.setState({
@@ -47,7 +47,7 @@ class EditMeme extends Component {
             url: this.state.url
         }
         // PATCH req ( /meme/:id )
-        await axios.patch('https://xmeme.harsh-vardhan.codes/memes/' + this.props.match.params.id, memePatch)
+        await axios.patch(process.env.REACT_APP_API_URL + '/' + this.props.match.params.id, memePatch)
             .then(() => {
                 alert('Success');
             })
