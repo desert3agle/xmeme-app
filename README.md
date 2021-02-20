@@ -49,7 +49,6 @@ Provide correct values in .env.development and proceed with local run :
 ```sh
 $ npm start
 ```
-server will run on port : 3000
 
 
 ### Deployment
