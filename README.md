@@ -27,11 +27,11 @@ Xmeme frontend uses :
 * [ReactJS] - 	frontend framework
 * [Bootstrap] - for css styling
 
-### Installation
+### Local Run
 
 You'll need to have Node >= 8.10 and npm >= 5.6 on your machine. 
 
-Install the dependencies  and start the server.
+Install the dependencies and start the server.
 
 ```sh
 $ cd xmeme-frontend
@@ -64,7 +64,7 @@ Xmeme backend uses :
 * [Mongoose] -ODM
 * [MongoDB] - Database
 
-### Installation
+### Local Run
 
 This project was setup in Node 12.xx so to install it:
 
@@ -73,7 +73,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-To install and start mongodb locally:
+Install and start mongodb locally:
 ```sh
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
@@ -81,20 +81,27 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 ```
+you can use mongodb atlas as an alternative.
 
-For installing dependencies
+Install dependencies
+
 ```sh
 $ cd xmeme-backend
 $ npm install
+```
+
+Set up environment variables :
+
+```sh
+$ cd xmeme-backend
+$ cp .env.template .env
+```
+
+Provide correct values in .env and proceed with local run:
+
+```sh
 $ npm start
 ```
-environment variables (.env)
-
-- server will run on port : 8081
-
-- swagger-ui will run on port : 8080
-
-- MongoDB LOCAL_URI: mongodb://localhost/&lt;DB-name&gt;
 
 ### Deployment
 
