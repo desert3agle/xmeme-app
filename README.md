@@ -8,7 +8,7 @@ Xmeme is a simple MERN stack web-app. which lets users to post, edit, delete and
 You can:
   - Put your name, meme caption and meme url and post it for everyone
   - Edit or Delete meme
-  - Check swagger-ui API documentation 
+  - Check swagger-ui for API documentation 
   
 ### Public Deployment 
 
@@ -31,27 +31,50 @@ Xmeme frontend uses :
 
 You'll need to have Node >= 8.10 and npm >= 5.6 on your machine. 
 
-Install the dependencies and start the server.
+Install dependencies:
 
 ```sh
 $ cd xmeme-frontend
-$ npm install or yarn install
-$ npm start or yarn start 
+$ npm install
+```
+
+Set up environment variables :
+
+```sh
+$ cp .env.template .env.development
+```
+
+Provide correct values in .env.development and proceed with local run :
+
+```sh
+$ npm start
 ```
 server will run on port : 3000
 
+
 ### Deployment
 
-Sign up for Netlify and install Netlify CLI
+Similar to .env.development, create a .env.production file with necessary variables.
+
+Make a production build of the Project :
 
 ```sh
 $ npm run build
-
-$ npm install netlify-cli -g
-$ netlif login
-
-$netlify deploy --dir=build --prod
 ```
+
+Sign up for Netlify and install Netlify CLI : 
+
+```sh
+$ npm install netlify-cli -g
+```
+
+Login to Netlify and deploy : 
+
+```sh
+$ netlif login
+$ netlify deploy --dir=build --prod
+```
+
 
 ## Backend 
 
@@ -73,7 +96,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-Install and start mongodb locally:
+To Install and start Mongodb 4.4 :
 ```sh
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
@@ -94,7 +117,6 @@ $ npm install
 Set up environment variables :
 
 ```sh
-$ cd xmeme-backend
 $ cp .env.template .env
 ```
 
