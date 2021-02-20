@@ -83,7 +83,8 @@ sudo systemctl start mongod
 ```
 you can use mongodb atlas as an alternative.
 
-Install dependencies
+
+Install dependencies :
 
 ```sh
 $ cd xmeme-backend
@@ -97,7 +98,7 @@ $ cd xmeme-backend
 $ cp .env.template .env
 ```
 
-Provide correct values in .env and proceed with local run:
+Provide correct values in .env and proceed with local run :
 
 ```sh
 $ npm start
