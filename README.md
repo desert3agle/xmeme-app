@@ -31,7 +31,7 @@ Xmeme frontend uses :
 
 You'll need to have Node >= 8.10 and npm >= 5.6 on your machine. 
 
-Install dependencies:
+Install dependencies :
 
 ```sh
 $ cd xmeme-frontend
@@ -132,6 +132,7 @@ Backend is deployed on  AWS ubuntu 18.04 EC2 instance with
 
  * [PM2] -  	process manger
  * [nginx] - 	web server and reverse proxy
+ * [ufw] - 	firewall
  * [Let's Encrypt and Certbot] -  for HTTPS deployment
  * [name.com] - for domain name provider
 
