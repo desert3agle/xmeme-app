@@ -85,6 +85,7 @@ Xmeme backend uses :
 * [Express] - framework for backend
 * [Mongoose] -ODM
 * [MongoDB] - Database
+* [Swagger] - API Documentation.
 
 ### Local Run
 
