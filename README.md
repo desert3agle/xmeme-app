@@ -24,8 +24,8 @@ Backend : [https://xmeme.harsh-vardhan.codes]
 
 Xmeme frontend uses : 
 
-* [ReactJS] - 	frontend framework
-* [Bootstrap] - for css styling
+* [ReactJS](https://reactjs.org/docs/getting-started.html) - frontend framework
+* [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) - for css styling
 
 ### Local Run
 
@@ -81,11 +81,11 @@ $ netlify deploy --dir=build --prod
 
 Xmeme backend uses : 
 
-* [NodeJS] -  evented I/O for the backend
-* [Express] - framework for backend
-* [Mongoose] -ODM
-* [MongoDB] - Database
-* [Swagger] - API Documentation
+* [NodeJS](https://nodejs.org/en/docs/) -  evented I/O for the backend
+* [Express](https://expressjs.com/) - framework for backend
+* [Mongoose](https://mongoosejs.com/) - ODM
+* [MongoDB](https://www.mongodb.com/) - Database
+* [Swagger](https://swagger.io/) - API Documentation
 
 ### Local Run
 
@@ -133,6 +133,9 @@ Backend is deployed on  AWS ubuntu 18.04 EC2 instance with
 
 
 
+### Authors
+
+* **Harsh Vardhan** - *Initial work* - [desert3agle](https://github.com/desert3agle)
 
 
 
