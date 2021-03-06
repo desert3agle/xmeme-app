@@ -5,7 +5,7 @@
     "description": "fetching/posting memes.",
     "version": "1.0.0"
   },
-  "host": "xmeme.harsh-vardhan.codes",
+  "host": "xmeme-app-hv.herokuapp.com",
   "schemes": [
     "https",
     "http"
@@ -49,7 +49,7 @@
         ],
         "responses": {
           "201": {
-            "description": "OK",
+            "description": "Created",
             "schema": {
               "$ref": "#/definitions/MemeID"
             }
@@ -152,16 +152,20 @@
     "Meme": {
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+	  "example": "60436f7c097cdd0022024bba"
         },
         "name": {
-          "type": "string"
+          "type": "string",
+	  "example": "Harsh Vardhan"
         },
         "caption": {
-          "type": "string"
+          "type": "string",
+	  "example": "meme from swagger"
         },
         "url": {
-          "type": "string"
+          "type": "string",
+	  "example": "https://cdn.vox-cdn.com/thumbor/cV8X8BZ-aGs8pv3D-sCMr5fQZyI=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19933026/image.png"
         }
       },
       "required": [
@@ -174,10 +178,12 @@
     "UpdateMeme": {
       "properties": {
         "caption": {
-          "type": "string"
+          "type": "string",
+	  "example": "meme from swagger"
         },
         "url": {
-          "type": "string"
+          "type": "string",
+	  "example": "https://cdn.vox-cdn.com/thumbor/cV8X8BZ-aGs8pv3D-sCMr5fQZyI=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19933026/image.png"
         }
       },
       "required": [
@@ -188,13 +194,16 @@
     "PostMeme": {
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+	  "example": "Harsh Vardhan"
         },
         "caption": {
-          "type": "string"
+          "type": "string",
+	  "example": "meme from swagger"
         },
         "url": {
-          "type": "string"
+          "type": "string",
+	  "example": "https://cdn.vox-cdn.com/thumbor/cV8X8BZ-aGs8pv3D-sCMr5fQZyI=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19933026/image.png"
         }
       },
       "required": [
@@ -206,7 +215,8 @@
     "MemeID": {
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+	  "example": "60436f7c097cdd0022024bba"
         }
       },
       "required": [

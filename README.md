@@ -3,6 +3,9 @@
 
 Xmeme is a simple MERN stack web-app. which lets users to post, edit, delete and scroll through alot of fun memes.
 
+**Public Deployment - [Xmeme](https://xmeme-app-hv.netlify.app)** 
+
+**API Documentation - [Docs](https://xmeme-app-hv.herokuapp.com/swagger-ui/)**
 
 
 You can:
@@ -10,13 +13,6 @@ You can:
   - Edit or Delete meme
   - Check swagger-ui for API documentation 
   
-### Public Deployment 
-
-Frontend : [https://xmeme-app-hv.netlify.app]
-
-Backend : [https://xmeme.harsh-vardhan.codes]
-
-
 ## Frontend 
 
 
@@ -125,15 +121,24 @@ $ ./server_run.sh
 
 Backend is deployed on  AWS ubuntu 18.04 EC2 instance with 
 
- * [PM2] -  	process manger
- * [nginx] - 	web server and reverse proxy
- * [UFW] - 	firewall
- * [Let's Encrypt and Certbot] -  for HTTPS deployment
- * [name.com] - for domain name provider
+ * [PM2](https://www.npmjs.com/package/pm2) -  	process manger
+ * [nginx](https://www.nginx.com/) - 	web server and reverse proxy
+ * [UFW](https://en.wikipedia.org/wiki/Uncomplicated_Firewall) - 	firewall
+ * [Let's Encrypt and Certbot](https://letsencrypt.org/) -  for HTTPS deployment
+ * [name.com](https://name.com) - for domain name provider
+
+Refer to [this](https://gist.github.com/bradtraversy/cd90d1ed3c462fe3bddd11bf8953a896) gist by [bradtraversy](https://github.com/bradtraversy) for elaborate aws/nginx/ssl deployment procedure.
 
 
+Heroku Deployment
 
-### Authors
+```sh
+$ heroku login -i
+$ heroku plugins:install heroku-builds
+$ heroku builds:create -a <name_of_your_app>
+```
+
+## Authors
 
 * **Harsh Vardhan** - *Initial work* - [desert3agle](https://github.com/desert3agle)
 
