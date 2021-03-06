@@ -128,7 +128,7 @@ $ ./server_run.sh
 Refer to [this](https://gist.github.com/bradtraversy/cd90d1ed3c462fe3bddd11bf8953a896) gist by [bradtraversy](https://github.com/bradtraversy) for elaborate aws/nginx/ssl deployment procedure.
 
 
-####Heroku Deployment
+#### Heroku Deployment
 
 ```sh
 $ heroku login -i
