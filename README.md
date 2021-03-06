@@ -18,7 +18,6 @@ You can:
 
 ### Tech
 
-Xmeme frontend uses : 
 
 * [ReactJS](https://reactjs.org/docs/getting-started.html) - frontend framework
 * [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) - for css styling
@@ -27,20 +26,20 @@ Xmeme frontend uses :
 
 You'll need to have Node >= 8.10 and npm >= 5.6 on your machine. 
 
-Install dependencies :
+Install dependencies 
 
 ```sh
 $ cd xmeme-frontend
 $ npm install
 ```
 
-Set up environment variables :
+Set up environment variables 
 
 ```sh
 $ cp .env.template .env.development
 ```
 
-Provide correct values in .env.development and proceed with local run :
+Provide correct values in .env.development and proceed with local run 
 
 ```sh
 $ npm start
@@ -51,19 +50,19 @@ $ npm start
 
 Similar to .env.development, create a .env.production file with necessary variables.
 
-Make a production build of the Project :
+Make a production build of the Project 
 
 ```sh
 $ npm run build
 ```
 
-Sign up for Netlify and install Netlify CLI : 
+Sign up for Netlify and install Netlify CLI 
 
 ```sh
 $ npm install netlify-cli -g
 ```
 
-Login to Netlify and deploy : 
+Login to Netlify and deploy 
 
 ```sh
 $ netlif login
@@ -75,7 +74,6 @@ $ netlify deploy --dir=build --prod
 
 ### Tech
 
-Xmeme backend uses : 
 
 * [NodeJS](https://nodejs.org/en/docs/) -  evented I/O for the backend
 * [Express](https://expressjs.com/) - framework for backend
@@ -85,20 +83,20 @@ Xmeme backend uses :
 
 ### Local Run
 
-Install dependencies :
+Install dependencies 
 
 ```sh
 $ cd xmeme-backend
 $ npm install
 ```
 
-Set up environment variables :
+Set up environment variables 
 
 ```sh
 $ cp .env.template .env
 ```
 
-Provide correct values in .env and proceed with local run :
+Provide correct values in .env and proceed with local run 
 
 ```sh
 $ npm start
@@ -119,7 +117,7 @@ $ ./server_run.sh
 
 ### Deployment
 
-Backend is deployed on  AWS ubuntu 18.04 EC2 instance with 
+#### AWS (ubuntu 18.04 EC2) Deployment
 
  * [PM2](https://www.npmjs.com/package/pm2) -  	process manger
  * [nginx](https://www.nginx.com/) - 	web server and reverse proxy
@@ -130,7 +128,7 @@ Backend is deployed on  AWS ubuntu 18.04 EC2 instance with
 Refer to [this](https://gist.github.com/bradtraversy/cd90d1ed3c462fe3bddd11bf8953a896) gist by [bradtraversy](https://github.com/bradtraversy) for elaborate aws/nginx/ssl deployment procedure.
 
 
-Heroku Deployment
+####Heroku Deployment
 
 ```sh
 $ heroku login -i
